@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+## GST Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The GST Management System is a full-stack application designed to manage Goods and Services Tax (GST) for various product categories. It allows admins to set GST rates, create products, record sales, generate bills with calculated taxes, and view sales data. Users can view products, select them for purchase, and generate bills.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+Frontend: ReactJS, Ant Design
+Backend: Node.js, Express
+Database: MySQL
+ORM: Sequelize
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+Node.js and npm installed
+MySQL server running
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend Setup
 
-### `npm run build`
+Clone the Repository
+git clone
+cd gst-management-system-backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
+node server.js --> to start the BE server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Frontend Setup
 
-### `npm run eject`
+Clone the Repository
+git clone
+cd gst-management-system-frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm i 
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How It Works
+## Admin Section
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Manage Categories: Admins can create, view, and update product categories, including setting GST rates.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Manage Products: Admins can create products, each associated with a category and GST rate.
 
-## Learn More
+Record Sales: Admins can record sales transactions, associating products with sales and generating bills.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+View Sales Summary: Admins can view summaries or graphs of sales data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## User Section
 
-### Code Splitting
+View Products: Users can browse a list of available products.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Add to Cart: Users can add products to their cart for purchase.
 
-### Analyzing the Bundle Size
+Generate Bills: Users can generate bills based on selected products, which includes calculated GST.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Folder Structure
 
-### Making a Progressive Web App
+backend/ - Contains the backend application with Express and Sequelize setup.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+models/ - Sequelize models for database tables.
 
-### Advanced Configuration
+routes/ - Express routes for handling API requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+config/ - Database configuration and environment variables.
 
-### Deployment
+frontend/ - Contains the ReactJS application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+src/ - Source files for React components, services, and styles.
 
-### `npm run build` fails to minify
+public/ - Public assets and HTML template.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Additional Information
+
+## API Endpoints:
+
+GET /categories - Fetch all categories
+POST /categories - Create a new category
+GET /products - Fetch all products
+POST /products - Create a new product
+POST /sales - Record a sale
+
+## Frontend Components:
+
+CreateCategory: Form to create new categories and manage GST rates.
+ProductPage: Display products and allow users to add them to their cart.
+BillGeneration: Generate and display bills based on selected products.
+

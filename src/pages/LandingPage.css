@@ -1,0 +1,21 @@
+.tile-container {
+    padding: 50px;
+    display: flex;
+ 
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f0f2f5;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    height: 150px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
