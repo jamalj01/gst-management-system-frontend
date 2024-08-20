@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Select, Input, Button, message } from 'antd';
-import { createCategory, fetchCategories } from '../../services/categoryService';
+import { Select, Input, Button } from 'antd';
+import {  fetchCategories } from '../../services/categoryService';
 
 const { Option } = Select;
 
@@ -10,9 +10,9 @@ const CreateCategory = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [gstRate, setGstRate] = useState('');
     const [error, setError] = useState('');
-    const [isModalVisible, setIsModalVisible] = useState(false);
-    const [newCategoryName, setNewCategoryName] = useState('');
-    const [newCategoryGstRate, setNewCategoryGstRate] = useState('');
+    // const [isModalVisible, setIsModalVisible] = useState(false);
+    // const [newCategoryName, setNewCategoryName] = useState('');
+    // const [newCategoryGstRate, setNewCategoryGstRate] = useState('');
 
     const navigate = useNavigate();
 
