@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Select, Input, Button, Modal, Form, message } from 'antd';
+import { Select, Input, Button, message } from 'antd';
 import { createCategory, fetchCategories } from '../../services/categoryService';
 
 const { Option } = Select;
@@ -40,32 +40,32 @@ const CreateCategory = () => {
             navigate('/create-product');      
     }
 
-    const showModal = () => {
-        setIsModalVisible(true);
-    };
+    // const showModal = () => {
+    //     setIsModalVisible(true);
+    // };
 
-    const handleModalOk = async () => {
-        try {
-            if (!newCategoryName || !newCategoryGstRate) {
-                message.error('Please fill in all fields');
-                return;
-            }
-            const newCategory = await createCategory(newCategoryName, newCategoryGstRate);
-            setCategories([...categories, newCategory]);
-            setSelectedCategory(newCategory.id);
-            setGstRate(newCategory.gst_rate);
-            setIsModalVisible(false);
-            setNewCategoryName('');
-            setNewCategoryGstRate('');
-            message.success('Category created successfully');
-        } catch (error) {
-            message.error('Error creating category');
-        }
-    };
+    // const handleModalOk = async () => {
+    //     try {
+    //         if (!newCategoryName || !newCategoryGstRate) {
+    //             message.error('Please fill in all fields');
+    //             return;
+    //         }
+    //         const newCategory = await createCategory(newCategoryName, newCategoryGstRate);
+    //         setCategories([...categories, newCategory]);
+    //         setSelectedCategory(newCategory.id);
+    //         setGstRate(newCategory.gst_rate);
+    //         setIsModalVisible(false);
+    //         setNewCategoryName('');
+    //         setNewCategoryGstRate('');
+    //         message.success('Category created successfully');
+    //     } catch (error) {
+    //         message.error('Error creating category');
+    //     }
+    // };
 
-    const handleModalCancel = () => {
-        setIsModalVisible(false);
-    };
+    // const handleModalCancel = () => {
+    //     setIsModalVisible(false);
+    // };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
