@@ -51,10 +51,10 @@ const CreateProduct = () => {
     };
 
     return (
-        <div className="form-container">
+        <div className="form-container" style={{margin: "3rem 15rem"}}>
             <h2>Create Product</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{width: "75%"}}>
                 <label>Product Name:</label>
                 <Input
                     type="text"

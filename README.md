@@ -25,7 +25,7 @@ git clone
 cd gst-management-system-backend
 
 npm install
-node server.js --> to start the BE server
+node index.js --> to start the BE server
 
 
 ## Frontend Setup
