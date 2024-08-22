@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = '//3.106.56.231:3001/api/summary/daily';
+const API_URL = 'https://3.106.56.231:3001/api/summary/daily';
 
 export const fetchSalesSummary = async (date) => {
     try {
